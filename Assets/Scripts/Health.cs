@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     }
 
     public event UnityAction<float, float> HealthChanged;
-    public event UnityAction Died;
+    public event UnityAction<Health> Died;
 
     public void TakeDamage(float damage) 
     {
@@ -26,7 +26,8 @@ public class Health : MonoBehaviour
 
             if(_current == 0)
             {
-                Died.Invoke();
+                Died?.Invoke(this);
+                Destroy(gameObject);
             }
         }
     }

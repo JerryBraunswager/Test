@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293380052900}
   - component: {fileID: 623911293380052901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BanditPantsRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293420764424}
   - component: {fileID: 623911293420764425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,8 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293439005491}
   - component: {fileID: 623911293439005500}
-  m_Layer: 0
+  - component: {fileID: 1635076576}
+  m_Layer: 6
   m_Name: AK-74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,6 +254,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1635076576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623911293439005490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b545ba7aa73764ca8b2e345ce5e6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: AK-74
+  _shootPoint: {fileID: 5583803064617349245}
+  _damage: 20
 --- !u!1 &623911293440199565
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 623911293440199566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Clothes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293494439980}
   - component: {fileID: 623911293494439981}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletproofCloak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,9 +403,9 @@ GameObject:
   - component: {fileID: 623911293607513201}
   - component: {fileID: 623911293607513200}
   - component: {fileID: 623911293607513202}
-  - component: {fileID: 8300422414495368582}
   - component: {fileID: 1385410114286243834}
-  m_Layer: 0
+  - component: {fileID: 1545902059}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,22 +497,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 100
   _joystick: {fileID: 0}
---- !u!58 &8300422414495368582
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623911293607513206}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.4
 --- !u!114 &1385410114286243834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +511,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxValue: 100
   _current: 0
+--- !u!114 &1545902059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623911293607513206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5516fd4bfb28b7a4ab3ae1c9058f6ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventoryHandler: {fileID: 0}
 --- !u!1 &623911293663886199
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293663886192}
   - component: {fileID: 623911293663886193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BanditPantsLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293728013599}
   - component: {fileID: 623911293728013592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletproofCloakWristRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +702,8 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293741496611}
   - component: {fileID: 6957113371154092025}
-  m_Layer: 0
+  - component: {fileID: 800374370593384757}
+  m_Layer: 6
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +739,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee14d37ee1de074d8ffb86aa4d16669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultWeapon: {fileID: 1150925064}
   _prefab: {fileID: 2299188865426590409, guid: 735fe0d13b6eb0f4fab7b278d88ec21e, type: 3}
+  _inventoryHandler: {fileID: 0}
+--- !u!58 &800374370593384757
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623911293741496610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.4
 --- !u!1 &623911293792103408
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +768,8 @@ GameObject:
   m_Component:
   - component: {fileID: 623911293792103409}
   - component: {fileID: 623911293792103410}
-  m_Layer: 0
+  - component: {fileID: 1150925064}
+  m_Layer: 6
   m_Name: Makarov
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,6 +844,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1150925064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623911293792103408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b545ba7aa73764ca8b2e345ce5e6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Makarov
+  _shootPoint: {fileID: 64031600319019224}
+  _damage: 7
 --- !u!1 &623911294147863001
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911294147863002}
   - component: {fileID: 623911294147863003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RingArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911294449103684}
   - component: {fileID: 623911294449103685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SovietBag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +1037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911294618221006}
   - component: {fileID: 623911294618221007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletproofCloakWristLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1073,7 +1121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911294849778522}
   - component: {fileID: 623911294849778523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1157,7 +1205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911295018958144}
   - component: {fileID: 623911295018958145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MilitaryHelmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911295125416881}
   - component: {fileID: 623911295125416882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911295280624808}
   - component: {fileID: 623911295280624809}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623911295420724778}
   - component: {fileID: 623911295420724779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,7 +1543,7 @@ GameObject:
   - component: {fileID: 7800504595618247699}
   - component: {fileID: 5861248674219471939}
   - component: {fileID: 329721571956769960}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,7 +1643,7 @@ GameObject:
   - component: {fileID: 7925371098721217301}
   - component: {fileID: 4928943914780810847}
   - component: {fileID: 4555566052741214081}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1700,7 +1748,7 @@ GameObject:
   - component: {fileID: 6840808534261602469}
   - component: {fileID: 7577222339362175696}
   - component: {fileID: 4964161319053249762}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8982999634553980345}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1811,7 +1859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5583803064617349245}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1844,7 +1892,7 @@ GameObject:
   - component: {fileID: 2903013766392781388}
   - component: {fileID: 6374758373329464933}
   - component: {fileID: 6309462997681044717}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64031600319019224}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1949,7 +1997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6161754595420983073}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +2036,7 @@ GameObject:
   - component: {fileID: 2495131325815936344}
   - component: {fileID: 7586947580159779314}
   - component: {fileID: 6163763690574714391}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

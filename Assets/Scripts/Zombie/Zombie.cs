@@ -9,13 +9,6 @@ public class Zombie : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private float _speed;
 
-    private Rigidbody2D _rigidbody;
-
-    private void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody2D>();
-    }
-
     private void OnEnable()
     {
         _noticeCollider.Saw += SeePlayer;
@@ -38,6 +31,7 @@ public class Zombie : MonoBehaviour
 
     private void SeePlayer(Collider2D collision)
     {
-        _rigidbody.velocity = Vector3.MoveTowards(transform.position, collision.transform.position, _speed * Time.deltaTime).normalized * _speed * Time.deltaTime;
+        Vector3 direction = (collision.transform.position - transform.position).normalized;
+        transform.Translate(direction * _speed * Time.deltaTime);
     }
 }

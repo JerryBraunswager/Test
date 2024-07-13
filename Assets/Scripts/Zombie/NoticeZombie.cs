@@ -9,6 +9,6 @@ public class NoticeZombie : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Saw.Invoke(collision);
+        Saw?.Invoke(collision);
     }
 }
